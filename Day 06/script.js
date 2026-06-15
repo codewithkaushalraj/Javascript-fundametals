@@ -88,5 +88,27 @@ console.log(fourth);
 console.log(restElem);
 
 
+// spread Operator will create a shallow copy
+arr=[10,20,30,40,{name:"kaushal",age:30,skills:['html','css','js']},50,60];
+let copyArr=[...arr]
+
+
+console.log(arr);
+console.log(copyArr);
+
+// For Making a Deep copy
+// Method 1: (By Using StructuredClone)
+copyArr=structuredClone(arr);
+
+arr[4].skills.push('React');
+// Method 2: 
+copyArr=JSON.parse(JSON.stringify(arr))
+console.log(copyArr);
+
+
+
+
+
+
 
 
