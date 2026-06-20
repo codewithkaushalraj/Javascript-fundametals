@@ -38,7 +38,7 @@ h1.style.padding="30px"
 const body=document.body // this is the simple way to selecting a body
 console.log(body)
 
-// For TextChange
+// For Changes
 // innerHTML
 // innerText 
 // TextContent
