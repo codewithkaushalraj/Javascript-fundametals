@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Form */
+form {
+  width: 100%;
+  max-width: 600px;
+  min-height: 350px;
+  background-color: rgb(32, 183, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+input {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border: 2px solid rgb(32, 3, 3);
+  border-radius: 10px;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  cursor: pointer;
+}
+
+/* Users Container */
+.users {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 400px;
+  min-height: 350px;
+  border-radius: 30px;
+  border: 2px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.card > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card > .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card > .text > h3 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.card > .text > p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn > button {
+  width: 50%;
+  font-weight: 700;
+}
+
+.btn > button:nth-child(1) {
+  background-color: rgb(133, 101, 20);
+}
+
+.btn > button:nth-child(2) {
+  background-color: rgb(168, 7, 7);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 60%;
+  }
+
+  .card > img {
+    height: 200px;
+  }
+}
+
+/* Landscape Phones/Tablets */
+@media (orientation: landscape) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  form {
+    width: 100%;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .users {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .card > img {
+    height: 180px;
+  }
+}
